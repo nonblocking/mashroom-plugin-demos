@@ -1,0 +1,69 @@
+{
+    "name": "mashroom-demo-portal-enhancement-plugins",
+    "version": "1.0.0",
+    "private": true,
+    "homepage": "https://www.mashroom-server.com",
+    "license": "MIT",
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.12.16",
+        "eslint": "^7.20.0",
+        "typescript": "^4.1.5"
+    },
+    "scripts": {
+        "lint": "eslint src --ext \".ts\" --fix",
+        "type-check": "tsc --noEmit",
+        "build": "babel src -d dist --extensions \".ts\" --copy-files"
+    },
+    "mashroom": {
+        "devModeBuildScript": "build",
+        "plugins": [
+            {
+                "name": "Test Portal Page Enhancement",
+                "type": "portal-page-enhancement",
+                "bootstrap": "./dist/backend/page-enhancements/mashroom-bootstrap.js",
+                "pageResources": {
+                    "js": [{
+                        "path": "test.js",
+                        "location": "header",
+                        "inline": "true"
+                    }, {
+                        "dynamicResource": "myScript",
+                        "location": "header"
+                    }],
+                    "css": [{
+                        "path": "test.css"
+                    }]
+                },
+                "defaultConfig": {
+                    "order": "500",
+                    "resourcesRoot": "./dist/backend/page-enhancements"
+                }
+            }, {
+                "name": "Test Portal App Enhancement",
+                "type": "portal-app-enhancement",
+                "bootstrap": "./dist/backend/app-enhancements/mashroom-bootstrap.js",
+                "portalCustomClientServices": {
+                    "customService": "CUSTOM_PORTAL_APP_CLIENT_SERVICE"
+                }
+            }, {
+                "name": "Portal App Enhancement Test App",
+                "title": "Portal App Enhancement Test App",
+                "type": "portal-app",
+                "bootstrap": "startPortalAppEnhancementTestApp",
+                "category": "Demo",
+                "resources": {
+                    "js": [
+                        "app.js"
+                    ],
+                    "css": []
+                },
+                "defaultConfig": {
+                    "resourcesRoot": "./dist/frontend/portal-app"
+                }
+            }
+        ]
+    }
+}
