@@ -1,7 +1,7 @@
 
 # Mashroom Plugin Demos
 
-A collection of example plugins for Mashroom Server
+A collection of example plugins for Mashroom Server (for details checkout the READMEs in the modules in the *packages* folder).
 
 You can find more demos in other repos:
 
