@@ -1,6 +1,16 @@
-.demo-reason-icon {
-    width: 80px;
-    margin-right: 20px;
-    margin-left: 15px;
-    align-self: center;
+
+.mashroom-demo-reasonreact-app {
+    display: flex;
+    padding: 10px;
+
+    .demo-reason-icon {
+        width: 80px;
+        margin-right: 20px;
+        margin-left: 15px;
+        align-self: center;
+    }
+
+    button {
+        margin-right: 10px;
+    }
 }

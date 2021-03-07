@@ -31,7 +31,7 @@ function App(Props) {
                   });
         }), []);
   return React.createElement("div", {
-              className: "mashroom-demo-react-app"
+              className: "mashroom-demo-reasonreact-app"
             }, React.createElement("div", {
                   className: "demo-reason-icon",
                   dangerouslySetInnerHTML: {

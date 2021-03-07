@@ -23,7 +23,7 @@ let make = (~appConfig: appConfig, ~messageBus: mashroomPortalMessageBus) => {
     Some(() => messageBus.unsubscribe("ping"));
   });
 
-  <div className="mashroom-demo-react-app">
+  <div className="mashroom-demo-reasonreact-app">
     <div dangerouslySetInnerHTML={{"__html": icon}} className="demo-reason-icon"></div>
     <div className="demo-reason-react-app-content">
       <h4> {React.string("Reason-React Demo App")} </h4>
