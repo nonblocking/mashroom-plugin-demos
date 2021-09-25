@@ -28,7 +28,7 @@
                     "js": [{
                         "path": "test.js",
                         "location": "header",
-                        "inline": "true"
+                        "inline": true
                     }, {
                         "dynamicResource": "myScript",
                         "location": "header"
