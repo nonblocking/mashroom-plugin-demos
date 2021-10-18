@@ -6,7 +6,7 @@ const bootstrap: MashroomPortalPageEnhancementPluginBootstrapFunction = () => {
             myScript: () => `console.info('My Script added');`,
         },
         rules: {
-            onlyOnPage2: (sitePath, pageFriendlyUrl) => pageFriendlyUrl.indexOf("/test2") !== -1,
+            onlyOnPage2: (sitePath, pageFriendlyUrl) => pageFriendlyUrl.indexOf('/test2') !== -1,
         }
     }
 };
