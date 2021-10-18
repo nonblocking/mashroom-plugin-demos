@@ -5,12 +5,11 @@
     "homepage": "https://www.mashroom-server.com",
     "license": "MIT",
     "dependencies": {
-
     },
     "devDependencies": {
-        "@babel/cli": "^7.14.5",
-        "eslint": "^7.30.0",
-        "typescript": "^4.3.5"
+        "@babel/cli": "^7.15.7",
+        "eslint": "^8.0.1",
+        "typescript": "^4.4.4"
     },
     "scripts": {
         "lint": "eslint src --ext \".ts\" --fix",

@@ -26,8 +26,8 @@
     "devDependencies": {
         "babel-core": "^6.26.3",
         "moduleserve": "^0.9.1",
-        "webpack": "^5.42.0",
-        "webpack-cli": "^4.7.2"
+        "webpack": "^5.58.2",
+        "webpack-cli": "^4.9.1"
     },
     "mashroom": {
         "devModeBuildScript": "build",
