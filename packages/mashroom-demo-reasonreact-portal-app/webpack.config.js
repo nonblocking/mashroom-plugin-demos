@@ -39,15 +39,7 @@ module.exports = {
                         loader: 'svg-inline-loader',
                     },
                 ],
-            },
-            {
-                test: /\.(png|gif|jpg|jpeg|ttf|eot|woff(2)?)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
-            },
+            }
         ],
     },
     externals: [],
