@@ -1,13 +1,12 @@
 
-import type {MashroomHttpProxyInterceptor} from '@mashroom/mashroom-http-proxy/type-definitions';
-import {ExpressRequest, ExpressResponse} from '@mashroom/mashroom/type-definitions';
-import {HttpHeaders, QueryParams} from '@mashroom/mashroom-http-proxy/type-definitions/api';
-import {IncomingMessage} from 'http';
+import type {Request, Response} from 'express';
+import type {IncomingMessage} from 'http';
+import type {MashroomHttpProxyInterceptor, HttpHeaders, QueryParams} from '@mashroom/mashroom-http-proxy/type-definitions';
 
 export default class TestInterceptor implements MashroomHttpProxyInterceptor {
 
     async interceptRequest(targetUri: string, existingHeaders: Readonly<HttpHeaders>, existingQueryParams: Readonly<QueryParams>,
-                           clientRequest: ExpressRequest, clientResponse: ExpressResponse) {
+                           clientRequest: Request, clientResponse: Response) {
         const logger = clientRequest.pluginContext.loggerFactory('test.http.interceptor');
         const securityService = clientRequest.pluginContext.services.security && clientRequest.pluginContext.services.security.service;
 
@@ -20,7 +19,7 @@ export default class TestInterceptor implements MashroomHttpProxyInterceptor {
     }
 
     async interceptResponse(targetUri: string, existingHeaders: Readonly<HttpHeaders>, targetResponse: IncomingMessage,
-                            clientRequest: ExpressRequest, clientResponse: ExpressResponse) {
+                            clientRequest: Request, clientResponse: Response) {
         const logger = clientRequest.pluginContext.loggerFactory('test.http.interceptor');
 
         logger.info(`===== Intercepting http proxy response: ${targetUri}, response code: ${targetResponse.statusCode}  =====`);
