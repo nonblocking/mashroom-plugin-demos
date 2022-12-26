@@ -1,0 +1,33 @@
+{
+    "name": "mashroom-demo-plain-es6-portal-app",
+    "version": "1.0.0",
+    "private": true,
+    "homepage": "https://www.mashroom-server.com",
+    "license": "MIT",
+    "mashroom": {
+        "plugins": [
+            {
+                "name": "Mashroom Demo Plain ES6 Portal App",
+                "title": "Demo Plain ES6 App",
+                "type": "portal-app",
+                "bootstrap": "startPlainES6DemoApp",
+                "category": "Demo",
+                "resources": {
+                    "js": [
+                        "bootstrap.mjs"
+                    ],
+                    "css": [
+                        "style.css"
+                    ]
+                },
+                "defaultConfig": {
+                    "resourcesRoot": ".",
+                    "appConfig": {
+                        "message": "This is an App written with plain ES6 modules",
+                        "pingButtonLabel": "Send Ping"
+                    }
+                }
+            }
+        ]
+    }
+}
