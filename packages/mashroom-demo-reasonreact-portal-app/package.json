@@ -19,9 +19,9 @@
     "author": "Milan Heimschild",
     "dependencies": {
         "bs-platform": "^9.0.2",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "reason-react": "^0.10.0"
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0",
+        "reason-react": "0.10.1"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",
