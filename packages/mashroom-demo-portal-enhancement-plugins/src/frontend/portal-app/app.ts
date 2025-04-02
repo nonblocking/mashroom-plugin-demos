@@ -17,6 +17,6 @@ const bootstrap: MashroomPortalAppPluginBootstrapFunction = (portalAppHostElemen
 
     portalAppHostElement.innerHTML = '';
     portalAppHostElement.appendChild(wrapper);
-}
+};
 
 (window as any).startPortalAppEnhancementTestApp = bootstrap;

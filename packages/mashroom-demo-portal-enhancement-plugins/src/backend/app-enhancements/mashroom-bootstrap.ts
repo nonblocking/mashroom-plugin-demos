@@ -20,7 +20,7 @@ const bootstrap: MashroomPortalAppEnhancementPluginBootstrapFunction = () => {
                 }
             });
         },
-    }
+    };
 };
 
 export default bootstrap;

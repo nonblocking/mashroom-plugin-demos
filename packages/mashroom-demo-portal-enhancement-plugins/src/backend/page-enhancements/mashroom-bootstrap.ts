@@ -1,4 +1,4 @@
-import {MashroomPortalPageEnhancementPluginBootstrapFunction} from '@mashroom/mashroom-portal/type-definitions';
+import type {MashroomPortalPageEnhancementPluginBootstrapFunction} from '@mashroom/mashroom-portal/type-definitions';
 
 const bootstrap: MashroomPortalPageEnhancementPluginBootstrapFunction = () => {
     return {
@@ -8,7 +8,7 @@ const bootstrap: MashroomPortalPageEnhancementPluginBootstrapFunction = () => {
         rules: {
             onlyOnPage2: (sitePath, pageFriendlyUrl) => pageFriendlyUrl.indexOf('/test2') !== -1,
         }
-    }
+    };
 };
 
 export default bootstrap;
